@@ -1,0 +1,76 @@
+@import "./vars";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap&subset=cyrillic');
+body {
+  font-family: 'Oswald', sans-serif;
+}
+.main {
+  background: url('../img/background.jpg')bottom center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  min-height: 100vh;
+  @include media-breakpoint-down(md) {
+    background: url('../img/bg-mob.jpg')bottom center no-repeat;
+    background-size: cover;
+    padding: 10px;
+  }
+}
+.open{
+  font-size: 3rem;
+  @include media-breakpoint-down(sm) {
+    font-size: 1.15rem;
+  }
+}
+.address{
+  position: relative;
+  span{
+    position: relative;
+    z-index: 2;
+  }
+  .address-bg{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 1rem;
+    .address-bg {
+      top: 56%;
+      width: 255px;
+    }
+  }
+}
+.farmer{
+  position: absolute;
+  top: -2.2rem;
+  right: calc(100% - 5px);
+  z-index: 2;
+}
+
+.link-media{
+  img {
+    width: 51px;
+  }
+}
+@include media-breakpoint-down(md) {
+  .logo {
+    img{
+      width: 105px;
+    }
+  }
+  .text-main{
+    font-size: 20px !important;
+  }
+  .phone{
+    a{
+      font-size: 1rem;
+    }
+  }
+  .link-media{
+    font-size: 13px;
+    img{
+      width: 19px;
+    }
+  }
+}
